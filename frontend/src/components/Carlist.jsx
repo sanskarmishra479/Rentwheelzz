@@ -10,7 +10,7 @@ function CarList() {
     useEffect(() => {
         async function fetchCars() {
             try {
-                const response = await axios.get("http://localhost:3000/user/getPackages", {
+                const response = await axios.get("https://rentwheelzz-2.onrender.com/user/getPackages", {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },

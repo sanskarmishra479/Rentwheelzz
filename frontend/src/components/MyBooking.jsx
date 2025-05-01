@@ -23,7 +23,7 @@ function MyBooking() {
         async function fetchCars() {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/user/my-package?status=${status}`, {
+                const response = await axios.get(`https://rentwheelzz-2.onrender.com/user/my-package?status=${status}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

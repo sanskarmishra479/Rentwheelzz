@@ -56,9 +56,9 @@ function ReserveInput() {
       <div className="h-90 w-70 bg-white shadow-2xl grid items-center justify-center p-5 rounded-md mt-30">
         <h1 className="p-3 font-semibold">Reservation Detail</h1>
         <label htmlFor="starting-date">Starting Date</label>
-        <input name="starting-date" className="border-[1px] border-gray-600 rounded-md p-2" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+        <input name="starting-date" placeholder="From.." className="border-[1px] border-gray-600 rounded-md p-2" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
         <label htmlFor="ending-date">Ending Date</label>
-        <input name="ending-date" className="border-[1px] border-gray-600 rounded-md p-2" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+        <input name="ending-date" placeholder="To.." className="border-[1px] border-gray-600 rounded-md p-2" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
         <div className="flex items-center justify-evenly gap-1">
           <button className="bg-gray-800 text-white rounded-md p-2" onClick={handleReserve}>RESERVE</button>
           <Link to={"/"} className="bg-gray-600 text-white rounded-md p-2">CANCEL</Link>

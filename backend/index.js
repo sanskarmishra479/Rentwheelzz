@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json({ limit: '1mb' }));
 app.use(cors({
-    origin: "https://rentwheelzz.vercel.app/",
+    origin: "https://rentwheelzz.vercel.app",
     credentials: true
   }));
 

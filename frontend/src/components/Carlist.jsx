@@ -10,7 +10,7 @@ function CarList() {
     useEffect(() => {
         async function fetchCars() {
             try {
-                const response = await axios.get("https://rentwheelzz-2.onrender.com/user/getPackages", {
+                const response = await axios.get("http://localhost:3000/user/getPackages", {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },
@@ -34,7 +34,7 @@ function CarList() {
     }
 
     return (
-        <div className="ml-20 pt-6 flex flex-wrap gap-6">
+        <div className="pt-6 flex flex-wrap gap-6 justify-center">
             {cars.map((car) => (
                 <CarCard
                     key={car.id}

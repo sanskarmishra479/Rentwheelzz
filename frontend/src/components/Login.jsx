@@ -18,7 +18,7 @@ function Login() {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch("https://rentwheelzz-2.onrender.com/user/login", {
+            const response = await fetch("http://localhost:3000/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

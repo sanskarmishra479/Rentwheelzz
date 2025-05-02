@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 function MyBooking() {
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [status, setStatus] = useState("All");
     const token = localStorage.getItem("token");
 
     const navigate = useNavigate();
@@ -23,7 +22,7 @@ function MyBooking() {
         async function fetchCars() {
             setLoading(true);
             try {
-                const response = await axios.get(`https://rentwheelzz-2.onrender.com/user/my-package?status=${status}`, {
+                const response = await axios.get(`http://localhost:3000/user/all/my-package`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -36,7 +35,7 @@ function MyBooking() {
         }
 
         fetchCars();
-    }, [status]); // NEW: re-run when status changes
+    }, []); 
 
     if (loading) {
         return (
@@ -50,17 +49,9 @@ function MyBooking() {
         <div className="h-screen w-screen">
             <Navbar />
             <div className="flex text-black items-center justify-evenly bg-gray-200 p-3">
-                {["All", "Confirmed", "Completed", "Cancelled"].map((item) => (
-                    <h1
-                        key={item}
-                        className={`cursor-pointer px-5 ${
-                            status === item ? "border-b-2 border-black font-bold" : "hover:border-b-[1px] hover:border-black"
-                        }`}
-                        onClick={() => setStatus(item)}
-                    >
-                        {item}
-                    </h1>
-                ))}
+                <h1 className="text-[13px] md:text-xl hover:border-b ">All</h1>
+                <h1 className="text-[13px] md:text-xl hover:border-b" >Canceled</h1>
+                <h1 className="text-[13px] md:text-xl hover:border-b">confirmed</h1>
             </div>
             <div className="mt-5 grid justify-center gap-5">
                 {cars.map((car) => (

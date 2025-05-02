@@ -180,9 +180,10 @@ userRouter.post("/reserve",authMiddleware, async function(req, res){
       }
 })
 
-userRouter.get("/my-package" , async function(req, res){
+userRouter.get("/all/my-package" , authMiddleware, async function(req, res){
   try {
-    const reservationCars = await reservationsModel.find();
+    const userEmail = req.user.userEmail;
+    const reservationCars = await reservationsModel.find({ userEmail: userEmail });
     res.status(200).json({
         status: "success",
         results: reservationCars.length,

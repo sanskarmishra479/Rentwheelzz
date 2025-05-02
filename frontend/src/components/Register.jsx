@@ -19,7 +19,7 @@ function Register() {
 
     const handleRegister = async () => {
         try {
-            const response = await fetch("http://localhost:3000/user/register", {
+            const response = await fetch("https://rentwheelzz-2.onrender.com/user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

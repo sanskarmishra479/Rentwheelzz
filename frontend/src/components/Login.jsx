@@ -55,7 +55,7 @@ function Login() {
                 <p className="text-gray-600 text-[13px]">If you did not have account <Link className="cursor-pointer text-blue-500 underline" to="/register">register</Link></p>
                 {error && <p className="text-red-500 text-sm">{error}</p>}
                 <input className="border-[1px] border-black p-2 rounded-md text-black" type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-                <input className="border-[1px] border-black p-2 rounded-md text-black" type="text" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
+                <input className="border-[1px] border-black p-2 rounded-md text-black" type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
                 <button className="bg-black rounded-md p-2 text-white cursor-pointer hover:bg-gray-800" onClick={handleLogin}>LOGIN</button>
             </div>
         </div>

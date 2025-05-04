@@ -57,7 +57,7 @@ function Register() {
                 {error && <p className="text-red-500 text-sm">{error}</p>}
                 <input className="border-[1px] border-black p-2 rounded-md text-black" type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} />
                 <input className="border-[1px] border-black p-2 rounded-md text-black" type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-                <input className="border-[1px] border-black p-2 rounded-md text-black" type="text" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
+                <input className="border-[1px] border-black p-2 rounded-md text-black" type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
                 <button className="bg-black rounded-md p-2 text-white cursor-pointer hover:bg-gray-900" onClick={handleRegister}>Register</button>
             </div>
         </div>
